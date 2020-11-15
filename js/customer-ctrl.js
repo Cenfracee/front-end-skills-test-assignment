@@ -24,6 +24,10 @@
  *===============================================================================*/
 
 // Todo: add all global variable declaration here
+var txtIDRegex = new RegExp("^C\\d\\d\\d$");
+var txtNameRegex = new RegExp("[A-Za-z \.]+");
+var txtAddressRegex = "";
+
 
 /*===============================================================================
  * Init
@@ -31,7 +35,7 @@
 
 init();
 
-function init(){
+function init() {
     // Todo: add the initialization code if any
 }
 
@@ -46,3 +50,33 @@ function init(){
  *===============================================================================*/
 
 // Todo: add all functions
+
+function save(){
+var customerID = document.getElementById("txt-id").value;
+var customerName=document.getElementById("txt-name").value;
+var customerAddress=document.getElementById("txt-address").value;
+
+
+var is_ID_Valid = txtIDRegex.test(customerID);
+var is_Name_Valid=txtNameRegex.test(customerName);
+
+
+
+    var cusIDAlert = document.querySelector('#cusIDAlert');
+    var txtCusID=document.getElementById("txt-id");
+    if(is_ID_Valid){
+        cusIDAlert.style.display="none";
+        txtCusID.style.border="";
+    }else {
+        cusIDAlert.style.display="flex";
+        txtCusID.style.border="solid red";
+        txtCusID.focus();
+    }
+
+
+
+
+}
+function clear(){
+
+}
