@@ -134,20 +134,25 @@ function save() {
 }
 
 function insertRow() {
+    var customerID = document.getElementById("txt-id").value;
+    var customerName = document.getElementById("txt-name").value;
+    var customerAddress = document.getElementById("txt-address").value;
+
     var table = document.getElementById("tbl-customers").getElementsByTagName("tbody")[0];
     var row = table.insertRow();
     var cell1 = row.insertCell(0);
     var cell2 = row.insertCell(1);
     var cell3 = row.insertCell(2);
     var cell4 = row.insertCell(3);
-    cell1.innerHTML = "C001";
-    cell2.innerHTML = "dasda";
-    cell3.innerHTML = "asddCELL2";
+    cell1.innerHTML = customerID;
+    cell2.innerHTML = customerName;
+    cell3.innerHTML = customerAddress;
     cell4.innerHTML = "<img src=\"\" class=\"table-icon\" onclick=\"deleteRow()\">";
 }
 
 function deleteRow(){
     console.log("click works");
+
 }
 function clear() {
 
