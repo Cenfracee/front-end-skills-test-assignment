@@ -143,10 +143,12 @@ function insertRow() {
     cell1.innerHTML = "C001";
     cell2.innerHTML = "dasda";
     cell3.innerHTML = "asddCELL2";
-    cell4.innerHTML = "<img class=\"table-icon\">"
+    cell4.innerHTML = "<img src=\"\" class=\"table-icon\" onclick=\"deleteRow()\">";
 }
 
-
+function deleteRow(){
+    console.log("click works");
+}
 function clear() {
 
 }
