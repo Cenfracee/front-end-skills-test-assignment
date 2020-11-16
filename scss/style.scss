@@ -58,8 +58,15 @@ main {
 
 .alert{
   display: none;
-
 }
+  .table-icon{
+    height: 30px;
+    width: 30px;
+    content:url("../img/trash.png");
+    &:hover{
+      content:url("../img/trash-hover.png");
+    }
+  }
 
 
   h3 {
